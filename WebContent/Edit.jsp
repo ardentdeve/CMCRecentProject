@@ -4,6 +4,38 @@
 <%  String username = (sh.getStudentInfo()).getUsername();
   Student s= sh.findByUsername(username);%>
 </head>
+<body style="background-color: lightblue;">
+<style>
+header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+nav {
+	line-height: 30px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 100px;
+	float: left;
+	padding: 5px;
+}
+
+section {
+	width: 350px;
+	float: left;
+	padding: 10px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+</style>
 <body>
 <form method="post" action="Edit_action.jsp" name="EditForm">
 <table style="text-align: left; width: 600px; height: 600px;"
@@ -49,6 +81,9 @@ value="Edit User" type="submit"><br>
 value="Reset " type="reset"><br>
 </td>
 </tr>
+<header>
+		<h1>EDIT PROFILE</h1>
+	</header>
 </tbody>
 </table>
 <br>

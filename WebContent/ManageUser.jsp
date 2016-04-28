@@ -10,6 +10,38 @@
 
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2"
 cellspacing="2">
+<body style="background-color: lightblue;">
+				<style>
+header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+nav {
+	line-height: 30px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 100px;
+	float: left;
+	padding: 5px;
+}
+
+section {
+	width: 350px;
+	float: left;
+	padding: 10px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+</style>
 <tbody>
 <tr align="center">
 
@@ -70,6 +102,9 @@ href="AddUser.jsp">Add a new user </a><br>
 </form>  
 </tr>
 <%}%>
+			<header>
+				<h1>MANAGE USERS</h1>
+			</header>
 </tbody>
 </table>
 <br>

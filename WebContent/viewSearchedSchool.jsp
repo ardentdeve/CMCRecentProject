@@ -11,11 +11,77 @@
     
  
 %>
-<h1> SEARCH RESULTS </h1>
+
 <br>
 <table style="text-align: left; width: 815px; height: 480px;" border="1"
 cellpadding="2" cellspacing="2">
+<body style="background-color: lightblue;">
+<style>
+header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+nav {
+	line-height: 30px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 100px;
+	float: left;
+	padding: 5px;
+}
+
+section {
+	width: 350px;
+	float: left;
+	padding: 10px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+</style>
 <tr>
+<head>
+<body style="background-color: lightblue;">
+<style>
+header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+nav {
+	line-height: 30px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 100px;
+	float: left;
+	padding: 5px;
+}
+
+section {
+	width: 350px;
+	float: left;
+	padding: 10px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+</style>
+</head>
 <td colspan="17" rowspan="1" style="vertical-align: top;"><form method="post" action="save.jsp" name="Save">
     <input name="Save" value="Save" type="submit"><br>
     <input name="University" value="<%=u.getName()%>" type="hidden">
@@ -145,6 +211,9 @@ cellpadding="2" cellspacing="2">
 <input size ="40"  name="emphases5",value ="<%=emphases5%>"><br>
 </tr>
 <tr>
+<header>
+		<h1>SCHOOL DETAILS</h1>
+	</header>	
 </table>
 
 <h1> MAY WE ALSO RECOMMEND </h1>
@@ -222,6 +291,6 @@ cellpadding="2" cellspacing="2">
 </tr>
 <%}%>
 </table>
-<br>			
+<br>		
 </body>
 </html>

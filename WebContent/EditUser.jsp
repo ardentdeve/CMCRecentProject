@@ -13,6 +13,38 @@
 <table style="text-align: left; width: 600px; height: 600px;"
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
+<body style="background-color: lightblue;">
+				<style>
+header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+nav {
+	line-height: 30px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 100px;
+	float: left;
+	padding: 5px;
+}
+
+section {
+	width: 350px;
+	float: left;
+	padding: 10px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+</style>
 <tr>
 <td style="vertical-align: top;">First Name<br>
 </td>
@@ -61,6 +93,9 @@ value="Edit User" type="submit"><br>
 value="Reset " type="reset"><br>
 </td>
 </tr>
+			<header>
+				<h1>EDIT USER</h1>
+			</header>
 </tbody>
 </table>
 <br>

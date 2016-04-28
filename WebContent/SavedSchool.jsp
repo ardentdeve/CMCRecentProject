@@ -5,6 +5,38 @@
 <style><head>
 <style></style>
 <title>savedSchool</title>
+<body style="background-color: lightblue;">
+<style>
+header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+nav {
+	line-height: 30px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 100px;
+	float: left;
+	padding: 5px;
+}
+
+section {
+	width: 350px;
+	float: left;
+	padding: 10px;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
+</style>
 </head>
 <body>
 <table style="text-align: left; width: 100%;" border="1"
@@ -34,6 +66,9 @@ for (int i = 0;i<savedUni.size();i++){
 </td>
 </tr>
 <%}%>
+<header>
+		<h1>MANAGE SAVED SCHOOLS</h1>
+	</header>
 </tbody>
 </table>
 </body>
