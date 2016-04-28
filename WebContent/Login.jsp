@@ -22,10 +22,46 @@ if(anyErrors!=null)
 }
 %>
 </head>
+<html>
+<head>
+<style>
+header {
+background-color:black;
+color:white;
+text-align:center;
+padding:5px;
+}
+nav {
+line-height:30px;
+background-color:#eeeeee;
+height:300px;
+width:100px;
+float:left;
+padding:5px;
+}
+section {
+width:350px;
+float:left;
+padding:10px;
+}
+footer {
+background-color:black;
+color:white;
+clear:both;
+text-align:center;
+padding:5px;
+}
+</style>
+</head>
+<body>
+
 <body style="background-color:lightblue;">
-<h1 style="color:blue;">WELCOME TO CMC </h1>
+<header>
+<h1>WELCOME TO CHOOSE MY COLLEGE</h1>
+</header>
+<br>
 <form method="post" action="Login-action.jsp" name="LoginForm">
-<table style="text-align: left; width: 400px; height: 200px;"
+<table style="text-align: center ; width: 300px; height: 300px;"
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>
@@ -53,5 +89,13 @@ value="reset" type="reset"><br>
 </table>
 <br>
 </form>
+<br>
+<br>
+<br>
+<header>
+</header>
+
+<br>
+<br>
 </body>
 </html>

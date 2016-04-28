@@ -11,16 +11,15 @@
     
  
 %>
+<h1> SEARCH RESULTS </h1>
+<br>
 <table style="text-align: left; width: 815px; height: 480px;" border="1"
 cellpadding="2" cellspacing="2">
 <tr>
-<td style="vertical-align: top;">
-<form method="post" action="save.jsp" name="Save">
+<td colspan="17" rowspan="1" style="vertical-align: top;"><form method="post" action="save.jsp" name="Save">
     <input name="Save" value="Save" type="submit"><br>
     <input name="University" value="<%=u.getName()%>" type="hidden">
-</form>
-<br>
-</td>
+</form><br></td>
 <tr>
 <tbody>
 <tr>
@@ -156,11 +155,11 @@ cellpadding="2" cellspacing="2">
 					University uni = allUni.get(i);
 					 ArrayList<String>Emph = uni.getEmphases();
 			%>
-		<table style="text-align: left; width: 100%;" border="1"
-		cellpadding="2" cellspacing="2">
+		<table style="text-align: left; width: 815px; height: 480px;" border="1"
+cellpadding="2" cellspacing="2">
 		<tbody>
 		<tr align="center">
-		<td colspan="17" rowspan="1" style="vertical-align: top;"><form method="post" action="Save.jsp" name="Save">
+		<td colspan="17" rowspan="1" style="vertical-align: top;"><form method="post" action="save.jsp" name="Save">
     <input name="Save" value="Save" type="submit"><br>
     <input name="University" value="<%=uni.getName()%>" type="hidden">
 </form><br></td>
@@ -195,71 +194,7 @@ cellpadding="2" cellspacing="2">
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top;">%FEMALE<br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getPctFemale()%>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">SAT VERBAL<br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getSatVerbal()%>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">SAT MATH<br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getSatMath()%>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">EXPENSES<br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getExpenses()%>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">%FINANCIAL AID <br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getPctFinancialAid()%>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">NUMBER OF APPLICANTS <br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getNumberOfApplicants()%>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">%ADMITTED<br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getPctAdmitted()%>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">%ENROLLED<br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getPctEnrolled()%>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">ACADEMIC SCALE(1-5)<br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getAcademicScale()%>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">SOCIAL SCALE(1-5)<br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getSocialScale()%>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">QUALITY OF LIFE SCALE(1-5)<br>
-</td>
-<td style="vertical-align: top;"><br><%=uni.getQualityOfLifeScale()%>
-</td>
-</tr>
+
 <tr>
 <% 
   String emph1= "";
@@ -267,11 +202,11 @@ cellpadding="2" cellspacing="2">
   String emph3= "";
   String emph4 ="";
   String emph5= "";
-  if(Emph.size()>= 1) emph1 = Emphases.get(0);
-  if(Emph.size()>= 2) emph2 = Emphases.get(1);  
-  if(Emph.size()>= 3) emph3= Emphases.get(2);
-  if(Emph.size()>= 4) emph4 = Emphases.get(3);
-  if(Emph.size()>= 5) emph5 = Emphases.get(4);
+  if(Emph.size()>= 1) emph1 = Emph.get(0);
+  if(Emph.size()>= 2) emph2 = Emph.get(1);  
+  if(Emph.size()>= 3) emph3= Emph.get(2);
+  if(Emph.size()>= 4) emph4 = Emph.get(3);
+  if(Emph.size()>= 5) emph5 = Emph.get(4);
    %> 
 <tr>
 <td colspan="1" rowspan="6" style="vertical-align: top;">EMPHASES<br>
@@ -285,8 +220,8 @@ cellpadding="2" cellspacing="2">
 <input size ="40"  name="emphases5",value ="<%=emph5%>"><br>
 </td>
 </tr>
+<%}%>
 </table>
 <br>			
-<%}%>
 </body>
 </html>

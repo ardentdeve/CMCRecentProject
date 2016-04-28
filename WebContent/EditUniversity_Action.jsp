@@ -74,7 +74,6 @@
     emphasis.add(emphases4);
     emphasis.add(emphases5);
     ArrayList<String>oldEmphasis = ah.getEmphasis(School);
-    System.err.println(value);
     
     if(value!= 0)
     {

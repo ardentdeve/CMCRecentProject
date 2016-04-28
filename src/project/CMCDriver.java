@@ -21,7 +21,7 @@ public class CMCDriver {
 		}
 		University tech = new University("Kanye West TECHNOLOGY ","Kanye City","BIG-CITY","PRIVATE",
 				5000,50.0,800,800,800,22000.0,50,1000.5,25.0,70,4,4,null);
-		ArrayList<University>uni= searchCh.search("","Kanye City","","",-1,-1,-1, -1, -1, -1,-1, -1, -1, -1,-1,-1,-1,-1, -1 , -1 , -1, -1, -1,-1,-1,-1,-1,-1,null);
+		ArrayList<University>uni= searchCh.search("","MINNESOTA","","",-1,-1,-1, -1, -1, -1,-1, -1, -1, -1,-1,-1,-1,-1, -1 , -1 , -1, -1, -1,-1,-1,-1,-1,-1,null);
 		for(University udi:uni)
 		{ 
 	

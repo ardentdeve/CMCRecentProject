@@ -164,7 +164,7 @@ cellspacing="2">
 <tr>
 <td style="vertical-align: top;">
 <form method="post" action="save.jsp" name="Save">
-    <input name="Save" value=Save" type="submit"><br>
+    <input name="Save" value="Save" type="submit"><br>
     <input name="University" value="<%=u.getName()%>" type="hidden">
 </form>
 <br>
