@@ -34,24 +34,24 @@ public class SearchController{
 		for(University u: universityList) {
 			boolean includeUni = true;
 
-			if(name!=null) {
+			if(!name.equals("")) {
 				if(!(u.getName().equals(name)))
 				{
 					includeUni = false;
+				
 				}
-
 			}
-
-			if(state!=null) {
+			if(!state.equals("")) {
 				String uniN= u.getState();
 				if(!(uniN.equals(state)))
 				{
 					includeUni = false;
 				}
+				
 
 			}
 
-			if(location!=null) {
+			if(!location.equals("")) {
 				String uniN= u.getLocation();
 				if(!(uniN.equals(location)))
 				{
@@ -60,7 +60,7 @@ public class SearchController{
 
 			}
 
-			if(control!=null) {
+			if(!control.equals("")) {
 				String uniN= u.getControl();
 				if(!(uniN.equals(control)))
 				{
@@ -268,30 +268,30 @@ public class SearchController{
 	}
 	public ArrayList<University> viewSchool(University school)
 	{
-		int numStudentsMax = Integer.MAX_VALUE; 
-	    int numStudentsMin = Integer.MIN_VALUE;
-	    double PctFemaleMax = Double.MAX_VALUE; 
-	    double PctFemaleMin= Double.MIN_VALUE;
-	    double satVerbalMax = Double.MAX_VALUE; 
-	    double satVerbalMin= Double.MIN_VALUE;
-	    double satMathMax = Double.MAX_VALUE; 
-	    double satMathMin= Double.MIN_VALUE;
-	    double expensesMax= Double.MAX_VALUE; 
-	    double expensesMin= Double.MIN_VALUE;
-	    double pctAidMax = Double.MAX_VALUE; 
-	    double pctAidMin= Double.MIN_VALUE;
-	    int numApplicantsMax= Integer.MAX_VALUE; 
-	   int numApplicantsMin= Integer.MIN_VALUE;
-	    double pctAdmittedMax= Double.MAX_VALUE; 
-	    double pctAdmittedMin= Double.MIN_VALUE;
-	    double pctEnrolledMax= Double.MAX_VALUE; 
-	    double pctEnrolledMin= Double.MIN_VALUE;
-	    int academicScaleMax= Integer.MAX_VALUE; 
-		int academicScaleMin= Integer.MIN_VALUE;
-		int socialScaleMax= Integer.MAX_VALUE; 
-		int socialScaleMin= Integer.MIN_VALUE;
-		int qualityScaleMax= Integer.MAX_VALUE; 
-		int qualityScaleMin= Integer.MIN_VALUE;
+		int numStudentsMax = Integer.MIN_VALUE; 
+	    int numStudentsMin = Integer.MAX_VALUE;
+	    double PctFemaleMax = Double.MIN_VALUE; 
+	    double PctFemaleMin= Double.MAX_VALUE;
+	    double satVerbalMax = Double.MIN_VALUE; 
+	    double satVerbalMin= Double.MAX_VALUE;
+	    double satMathMax = Double.MIN_VALUE; 
+	    double satMathMin= Double.MAX_VALUE;
+	    double expensesMax= Double.MIN_VALUE; 
+	    double expensesMin= Double.MAX_VALUE;
+	    double pctAidMax = Double.MIN_VALUE; 
+	    double pctAidMin= Double.MAX_VALUE;
+	    int numApplicantsMax= Integer.MIN_VALUE; 
+	   int numApplicantsMin= Integer.MAX_VALUE;
+	    double pctAdmittedMax= Double.MIN_VALUE; 
+	    double pctAdmittedMin= Double.MAX_VALUE;
+	    double pctEnrolledMax= Double.MIN_VALUE; 
+	    double pctEnrolledMin= Double.MAX_VALUE;
+	    int academicScaleMax= Integer.MIN_VALUE; 
+		int academicScaleMin= Integer.MAX_VALUE;
+		int socialScaleMax= Integer.MIN_VALUE; 
+		int socialScaleMin= Integer.MAX_VALUE;
+		int qualityScaleMax= Integer.MIN_VALUE; 
+		int qualityScaleMin= Integer.MAX_VALUE;
 	    ArrayList<University>all = dbl.getUniversities();
 	    for (University u : all) {
 	        if (u.getNumberStudents() < numStudentsMin)
@@ -350,6 +350,14 @@ public class SearchController{
 	    ArrayList<University> allSort = new ArrayList<University>();
 	    for (University u : all) {
 	       int dist = 0;
+	       if(!school.getName().equals(u.getName()))
+	    	   dist+=1;
+	       if(!school.getState().equals(u.getState()))
+	    	   dist+=1;
+	       if(!school.getLocation().equals(u.getLocation()))
+	    	   dist+=1;
+	       if(!school.getControl().equals(u.getControl()))
+	    	   dist+=1;
 	        dist += Math.abs(school.getNumberStudents() - u.getNumberStudents()) / (numStudentsMax - numStudentsMin);
 	        dist += Math.abs(school.getPctFemale() - u.getPctFemale()) / (PctFemaleMax - PctFemaleMin);
 	        dist += Math.abs(school.getSatVerbal() - u.getSatVerbal()) / (satVerbalMax - satVerbalMin);
@@ -374,11 +382,11 @@ public class SearchController{
 			University uni5=null;
 			for(int i  =0 ; i< allSort.size();i++)
 			{
-				 uni= allSort.get(0);
-				uni2 = allSort.get(1);
-				uni3 = allSort.get(2);
-				uni4 = allSort.get(3);
-				 uni5 = allSort.get(4);
+				 uni= allSort.get(1);
+				uni2 = allSort.get(2);
+				uni3 = allSort.get(3);
+				uni4 = allSort.get(4);
+				 uni5 = allSort.get(5);
 			}
 			newList.add(uni);
 			newList.add(uni2);

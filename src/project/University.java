@@ -74,6 +74,28 @@ public class University implements Comparable<University> {
 	 * @param emphases the emphases to set
 	 * @param similarUniversities the similarUniversities to set
 	 */
+	/**
+	 * Constructor
+	 * 
+	 * @param name the name to set
+	 * @param state the state to set
+	 * @param location the location to set
+	 * @param numberStudents the numberStudents to set
+	 * @param pctFemale the pctFemale to set
+	 * @param satVerbal the satVerbal to set
+	 * @param satMath the satMath to set
+	 * @param expenses the expenses to set
+	 * @param pctFinancialAid the pctFinancialAid to set
+	 * @param numberOfApplicants the numberOfApplicants to set
+	 * @param pctAdmitted the pctAdmitted to set
+	 * @param pctEnrolled the pctEnrolled to set
+	 * @param academicScale the academicScale to set
+	 * @param socialScale the socialScale to set
+	 * @param qualityOfLifeScale the qualityOfLifeScale to set
+	 * @param control the control to set
+	 * @param emphases the emphases to set
+	 * @param similarUniversities the similarUniversities to set
+	 */
 	public University(String name, String state, String location, String control ,int numberStudents, double pctFemale,
 			double satVerbal, double satMath, double expenses, double pctFinancialAid, int numberOfApplicants,
 			double pctAdmitted, double pctEnrolled, int academicScale, int socialScale, int qualityOfLifeScale,ArrayList<String>emphases) {

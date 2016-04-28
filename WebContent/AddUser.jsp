@@ -5,13 +5,14 @@
 
 <title>Add User Form</title>
 </head>
-<body bgcolor ="black">
+<body bgcolor ="white">
 <br>
 <br>
+<h1 style="text-align: center;"> ADD A USER </h1>
 <form method="post" action="AddUser_action.jsp" name="addUser"><br>
 <table style="text-align: left; width: 615px; height: 439px;"
 border="1" cellpadding="2" cellspacing="2" align="center">
-<tbody style="vertical-align: top; background-color: red;">
+<tbody style="vertical-align: top; background-color: lightblue;">
 <tr>
 <td style="vertical-align: top;">First Name<br>
 </td>

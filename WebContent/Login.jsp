@@ -22,10 +22,10 @@ if(anyErrors!=null)
 }
 %>
 </head>
-<body style="background-color:lightgrey;">
-<h1>WELCOME TO CMC </h1>
+<body style="background-color:lightblue;">
+<h1 style="color:blue;">WELCOME TO CMC </h1>
 <form method="post" action="Login-action.jsp" name="LoginForm">
-<table style="text-align: left; width: 601px; height: 117px;"
+<table style="text-align: left; width: 400px; height: 200px;"
 border="1" cellpadding="2" cellspacing="2">
 <tbody>
 <tr>

@@ -1,5 +1,6 @@
 <%@include file="VerifyStudent.jsp"%>
 <%@page language="java" import="project.*"%>
+<form method="post" action="searchAction.jsp" name="searchForm">
 <table style="text-align: left; width: 939px; height: 872px;" border="1"
 cellpadding="2" cellspacing="2">
 <tbody>
@@ -10,6 +11,7 @@ cellpadding="2" cellspacing="2">
 name="schoolName"><br>
 </td>
 </tr>
+<br>
 <tr>
 <td style="vertical-align: top;">by State<br>
 </td>
@@ -108,9 +110,7 @@ name="qualityOfLifeScaleMin"> and <input name="qualityOfLifeScaleMax"></td>
 </tr>
 <tr>
 <td style="vertical-align: top;">
-<form method="post" action="searchAction.jsp" name="SearchAction"><input
-name="search" value="Search For Schools" type="submit"><br>
-</form>
+<input name="search" value="Search For Schools" type="submit"><br>
 <br>
 </td>
 <td style="vertical-align: top;"><input name="Reset" value="Reset"
@@ -121,5 +121,6 @@ type="reset"><br>
 </table>
 <br>
 <br>
+</form>
 </body>
 </html>

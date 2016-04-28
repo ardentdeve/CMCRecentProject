@@ -43,7 +43,7 @@ href="AddUser.jsp">Add a new user </a><br>
         User u = allUsers.get(i); %> 
  <tr>        
 <td style="vertical-align: top;">
-<form method="post" action="DeactivateUser.jsp" name="deactivate">
+<form method="post" action="deactivate.jsp" name="deactivate">
     <input name="Deactivate" value="deactivate" type="submit"><br>
     <input name="User" value="<%=u.getUsername()%>" type="hidden">
 </form> 

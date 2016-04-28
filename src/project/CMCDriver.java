@@ -7,30 +7,30 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class CMCDriver {
-	private Student s;
 	private String username;
 
 
 	public static void main(String[] args) {
 
 		SearchController searchCh = new SearchController();
+		AdminUI admin = new AdminUI();
+		ArrayList<String> emphasis = admin.getEmphasis("ADELPHI");
+		for(int i = 0; i<emphasis.size(); i++)
+		{
+			System.out.println(emphasis.get(i));
+		}
 		University tech = new University("Kanye West TECHNOLOGY ","Kanye City","BIG-CITY","PRIVATE",
 				5000,50.0,800,800,800,22000.0,50,1000.5,25.0,70,4,4,null);
-		ArrayList<University>uni= searchCh.search(null,null,null,null,10000,15000,40, 80, 300, 600, 200, 500, 20000, 50000, 40, 80, 4000, 6000, 40 , 80 , 20, 40, 1,2,1,2,1,2,null);
+		ArrayList<University>uni= searchCh.search("","Kanye City","","",-1,-1,-1, -1, -1, -1,-1, -1, -1, -1,-1,-1,-1,-1, -1 , -1 , -1, -1, -1,-1,-1,-1,-1,-1,null);
 		for(University udi:uni)
 		{ 
-	     ArrayList<University>u = searchCh.viewSchool(udi);
-	     for(University i : u)
-	     {
-		System.out.println(i.getName());
+	
+	          ArrayList<University >reco = searchCh.viewSchool(udi);
+	          for(University u : reco)
+	          {
+	        	  System.out.println(u.getDistance());
+	          }
 			}
-		}
-			
-		
-				
-				
-				
-				
 		
 		StudentUI  studentUI= new StudentUI();
 		AdminUI   adminUI= new AdminUI();

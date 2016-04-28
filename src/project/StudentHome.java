@@ -162,7 +162,7 @@ public class StudentHome {
 	public University uniInfo(String uni)
 	{
 		University university = null;
-		for(University u: this.getSavedUniversity())
+		for(University u: dbl.getUniversities())
 		{
 			if(u.getName().equals(uni))
 			{

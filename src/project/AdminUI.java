@@ -55,6 +55,10 @@ public class AdminUI {
 		return adminH.addStudent(s);
 		
 	}
+	public int addUniversityEmphasis(University u, String emphasis)
+	{
+		return adminH.addUniversityEmphasis(u, emphasis);
+	}
 
 	/**
 	 * method for an admin to add another admin to adminHome
@@ -107,10 +111,20 @@ public class AdminUI {
 	
 	}
 	
+	public int removeEmphasis(String uni, String emphases)
+	{
+		return adminH.removeEmphasis(uni,emphases);
+	}
+	
 	public ArrayList<User> getUsers()
 	{
 		return adminH.getUsers();
 	}
+	public ArrayList <String> getEmphasis(String uni)
+	{
+		return adminH.getEmphases(uni);
+	}
+	
 
 	/**
 	 * Calls studentHome to get all Students
@@ -186,6 +200,11 @@ public class AdminUI {
 	{
  return adminH.findUser(username);
 }
+	
+	public int deactivateUser(User u)
+	{
+		return adminH.deactivateUser(u);
+	}
 }
 
 

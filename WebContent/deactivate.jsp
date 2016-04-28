@@ -1,7 +1,7 @@
 <%@include file="VerifyAdmin.jsp"%>
 <%  
-    String student = request.getParameter("Student");
-	Student student1 = sh.findByUsername(student);
-    ah.deactivateUser(student1);
-    response.sendRedirect("Menu.jsp");
+    String s = request.getParameter("User");
+	User u = ah.findUser(s);
+    ah.deactivateUser(u);
+    response.sendRedirect("AdminMenu.jsp");
 %>

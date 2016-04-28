@@ -66,6 +66,17 @@ public class AdminHome {
 	public boolean isLoggedOn() {
 		return loggedOn;
 	}
+	
+	public ArrayList<String> getEmphases(String uni)
+	{
+		return dbl.getEmphasis(uni);
+		
+	}
+	
+	public int removeEmphasis(String uni, String emphases)
+	{
+		return dbl.removeUniversityEmphasis( uni, emphases);
+	}
 
 
 
@@ -123,6 +134,11 @@ public class AdminHome {
 			}
 			return u;
 		}
+		
+		public int addUniversityEmphasis(University u, String emphasis)
+		{
+			return dbl.addUniversityEmphasis(u, emphasis);
+		}
 
 
 
@@ -132,10 +148,16 @@ public class AdminHome {
 	 * @param username username to be deactivated
 	 */
 
-	public int deactivateUser(Student student){
+	public int deactivateStudent(Student student){
 		
 	   return dbl.editStudent(student.getUsername() , student.getFirstName(), student.getLastName(), student.getPassword(), student.getType(), 'N');
 	}
+	
+	public int deactivateUser(User student){
+		
+		   return dbl.editUser(student.getUsername() , student.getFirstName(), student.getLastName(), student.getPassword(), student.getType(), 'N');
+		}
+
 
 	
 	/**

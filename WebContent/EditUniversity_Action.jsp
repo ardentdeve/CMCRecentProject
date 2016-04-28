@@ -10,9 +10,9 @@
     	value = 3;
     }
     String Control= request.getParameter("Control");
-    if(!(Control.toUpperCase().equals("URBAN")) || (Control.toUpperCase().equals("SUBURBAN"))|| (Control.toUpperCase().equals("SMALL-CITY"))||(Control.toUpperCase().equals("-1")))
+    if(!(Control.toUpperCase().equals("PRIVATE")) || (Control.toUpperCase().equals("STATE"))|| (Control.toUpperCase().equals("CITY"))||(Control.toUpperCase().equals("-1")))
     {
-    	value = 3;
+    	value = 4;
     }
     int numberOfStudents = Integer.parseInt(request.getParameter("NoStudents"));
     double PctFemale= Double.parseDouble(request.getParameter("PctFemale"));
@@ -58,17 +58,23 @@
     	value = 15;
     }
     int qualityOfLifeScale= Integer.parseInt(request.getParameter("QualityOfLifeScale"));
+    if(qualityOfLifeScale<1 || qualityOfLifeScale>5)
+    {
+    	value = 16;
+    }
     String emphases1 = request.getParameter("emphases1");
     String emphases2 = request.getParameter("emphases2");
     String emphases3 = request.getParameter("emphases3");
     String emphases4 = request.getParameter("emphases4");
     String emphases5 = request.getParameter("emphases5");
-    ArrayList<String>emphasesList = new ArrayList<String>();
-    emphasesList.add(emphases1);
-    emphasesList.add(emphases2);
-    emphasesList.add(emphases3);
-    emphasesList.add(emphases4);
-    emphasesList.add(emphases5);
+    ArrayList<String>emphasis = new ArrayList<String>();
+    emphasis.add(emphases1);
+    emphasis.add(emphases2);
+    emphasis.add(emphases3);
+    emphasis.add(emphases4);
+    emphasis.add(emphases5);
+    ArrayList<String>oldEmphasis = ah.getEmphasis(School);
+    System.err.println(value);
     
     if(value!= 0)
     {
@@ -76,8 +82,14 @@
     }
     else
     {
-   University editS = new University(School,State,Location,Control,numberOfStudents,PctFemale,satVerbal,satMath,Expenses,PctAid,Applicants,PctAdmitted,PctEnrolled,AcademicScale,socialScale,qualityOfLifeScale,emphasesList);  
+    
+   University editS = new University(School,State,Location,Control,numberOfStudents,PctFemale,satVerbal,satMath,Expenses,PctAid,Applicants,PctAdmitted,PctEnrolled,AcademicScale,socialScale,qualityOfLifeScale,emphasis);  
    ah.editUniversities(editS);
-    response.sendRedirect("AdminMenu.jsp");      
+   ah.addUniversityEmphasis(editS,emphases1);
+   ah.addUniversityEmphasis(editS,emphases2);
+   ah.addUniversityEmphasis(editS,emphases3);
+   ah.addUniversityEmphasis(editS,emphases4);
+   ah.addUniversityEmphasis(editS,emphases5);
+    response.sendRedirect("ManageUniversity.jsp");      
     }
 %>

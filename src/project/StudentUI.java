@@ -68,6 +68,11 @@ public class StudentUI {
 	{
 		return searchC.search(name, state, location, control, numberStudentsMin, numberStudentsMax, pctFemaleMin, pctFemaleMax, satVerbalMin, satVerbalMax, satMathMin, satMathMax, expensesMin, expensesMax, pctFinancialAidMin, pctFinancialAidMax, numberOfApplicantsMin, numberOfApplicantsMax, pctAdmittedMin, pctAdmittedMax, pctEnrolledMin, pctEnrolledMax, AcademicScaleMin, AcademicScaleMax, socialScaleMin, socialScaleMax, QualityOfLifeScaleMin, QualityOfLifeScaleMax, emphasis);
 	}
+	
+	public ArrayList<University> viewRecommended(University u)
+	{
+		return searchC.viewSchool(u);
+	}
 
 
 
