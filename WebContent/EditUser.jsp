@@ -1,11 +1,11 @@
 <%@include file="VerifyAdmin.jsp"%>
 <%@page language="java" import="project.*"%>
 <title></title>
-
 <%    String username = request.getParameter("User");
-      User u = ah.findUser(username);
-      
-      
+       User u = ah.findUser(username);
+       
+        
+       
 %>
 </head>
 <body>

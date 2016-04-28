@@ -7,17 +7,17 @@
     String Password = request.getParameter("Password");
     char type = (request.getParameter("Type")).charAt(0);
     char status = (request.getParameter("Status")).charAt(0);
-    if(type=='u')
+  if(type == 'u' || type == 'U')
     {
-    	Student editS = new Student(firstName,lastname,username,Password,status);
+    	Student editS = new Student(firstName,lastname,username,Password,type,status);
     	ah.editStudent(editS);
-    	response.sendRedirect("AdminMenu.jsp");  
+    	response.sendRedirect("ManageUser.jsp");  
     }
-    else if(type =='a')
+    else if(type == 'a' || type == 'A')
     {
-    	Admin editA = new Admin(firstName,lastname,username,Password,status);
+    	Admin editA = new Admin(firstName,lastname,username,Password,type,status);
     	ah.editAdmin(editA);
-    	response.sendRedirect("AdminMenu.jsp");  
+    	response.sendRedirect("ManageUser.jsp");  
     }
   
   

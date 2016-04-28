@@ -95,9 +95,10 @@ public class AdminUI {
 	public int editStudent(Student student)
 	{
 		
-			return adminH.editStudent(student);
+			return studentH.editProfile(student);
 		
 	}
+	
 	/**
 	 * Edits a specific admin in the adminHome
 	 * @param a admin that is being edited
